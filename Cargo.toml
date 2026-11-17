@@ -1,0 +1,23 @@
+[package]
+name = "tuifinder"
+version = "0.1.0"
+edition = "2024"
+description = "Read-only, live Git-aware code explorer for SSH and tmux"
+license = "MIT"
+authors = ["JAEGYUN JUNG"]
+repository = "https://github.com/TGoddessana/tuifinder"
+include = ["src/**", "tests/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE", "install.sh"]
+
+[dependencies]
+crossterm = "0.29"
+ignore = "0.4"
+notify = "8"
+ratatui = "0.30"
+syntect = "5"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+strip = true
